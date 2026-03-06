@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  excel-mcp-server:
+    build: mcp-servers/excel-mcp-server
+
+  mcp-plots:
+    build: mcp-servers/plot-mcp-server
+
+  office-word-mcp-server:
+    build: mcp-servers/word-mcp-server
+    environment:
+      MCP_TRANSPORT: streamable-http
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: 9002
+
+  pymcp-fs:
+    build: mcp-servers/file-mcp-server
+
+  mcp_server:
+    build: mcp-servers/mcp_server
