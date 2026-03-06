@@ -3,9 +3,13 @@ version: '3.9'
 services:
   excel-mcp-server:
     build: mcp-servers/excel-mcp-server
+    ports:
+      - "9001:9001"
 
   mcp-plots:
     build: mcp-servers/plot-mcp-server
+    ports:
+      - "9005:9005"
 
   office-word-mcp-server:
     build: mcp-servers/word-mcp-server
@@ -13,9 +17,15 @@ services:
       MCP_TRANSPORT: streamable-http
       MCP_HOST: 0.0.0.0
       MCP_PORT: 9002
+    ports:
+      - "9002:9002"
 
   pymcp-fs:
     build: mcp-servers/file-mcp-server
+    ports:
+      - "9003:9003"
 
   mcp_server:
     build: mcp-servers/mcp_server
+    ports:
+      - "9004:9004"
