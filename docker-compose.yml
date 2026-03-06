@@ -13,6 +13,7 @@ services:
 
   office-word-mcp-server:
     build: mcp-servers/word-mcp-server
+    network_mode: "host"
     environment:
       MCP_TRANSPORT: streamable-http
       MCP_HOST: 0.0.0.0
