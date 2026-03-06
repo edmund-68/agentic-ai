@@ -1,0 +1,10 @@
+[project]
+name = "PyMCP-FS"
+version = "0.1.0"
+description = "This is a robust Python-based MCP Filesystem Server. It enables AI models and applications to securely interact with the host system's file directories through a defined set of tools, allowing for operations like reading, writing, moving, and listing files and directories."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.6.1",
+    "mcp[cli]>=1.9.2",
+]
